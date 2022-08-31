@@ -10,7 +10,7 @@ const Store = () => {
         {storeItems.map((item) => {
           return (
             <Col>
-              <StoreItem {...item} />
+              <StoreItem key={item.id} {...item} />
             </Col>
           );
         })}

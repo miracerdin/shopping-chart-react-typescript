@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import "./App.css";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -8,7 +9,7 @@ import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <ShoppingCartProvider>
         <Navbar />
         <Container className="mb-4">
@@ -19,7 +20,7 @@ function App() {
           </Routes>
         </Container>
       </ShoppingCartProvider>
-    </>
+    </div>
   );
 }
 
