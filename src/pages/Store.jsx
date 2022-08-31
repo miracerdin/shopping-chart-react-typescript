@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
 import storeItems from "../data/items.json";
 
-const Stores = () => {
+const Store = () => {
   return (
     <>
       <div>Stores</div>
@@ -19,4 +19,4 @@ const Stores = () => {
   );
 };
 
-export default Stores;
+export default Store;
