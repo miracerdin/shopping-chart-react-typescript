@@ -1,4 +1,3 @@
-import React, { FunctionComponent } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
@@ -9,19 +8,14 @@ type StoreItemProps = {
   price: number;
   imgUrl: string;
 };
-const StoreItem: FunctionComponent<StoreItemProps> = ({
-  id,
-  name,
-  price,
-  imgUrl,
-}) => {
+
+export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   const {
     getItemQuantity,
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
   } = useShoppingCart();
-
   const quantity = getItemQuantity(id);
 
   return (
@@ -39,8 +33,8 @@ const StoreItem: FunctionComponent<StoreItemProps> = ({
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button onClick={() => increaseCartQuantity(id)} className="w-100">
-              + Add to Card
+            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+              + Add To Cart
             </Button>
           ) : (
             <div
@@ -53,9 +47,8 @@ const StoreItem: FunctionComponent<StoreItemProps> = ({
               >
                 <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                 <div>
-                  <span className="fs-3">{quantity}</span>in cart
+                  <span className="fs-3">{quantity}</span> in cart
                 </div>
-
                 <Button onClick={() => increaseCartQuantity(id)}>+</Button>
               </div>
               <Button
@@ -71,6 +64,4 @@ const StoreItem: FunctionComponent<StoreItemProps> = ({
       </Card.Body>
     </Card>
   );
-};
-
-export default StoreItem;
+}

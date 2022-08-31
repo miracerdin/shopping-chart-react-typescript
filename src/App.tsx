@@ -3,8 +3,8 @@ import { Container } from "react-bootstrap";
 import Stores from "./pages/Stores";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
