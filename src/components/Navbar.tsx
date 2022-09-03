@@ -7,16 +7,37 @@ export function Navbar() {
   return (
     <NavbarBs sticky="top" className="shadow p-3 mb-5 -rounded">
       <Container>
-        <Nav className="me-auto">
-          <Nav.Link to="/" as={NavLink}>
+        <Nav className="me-auto gap-4">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "activeClassName"
+                : "text-decoration-none text-white fw-700"
+            }
+          >
             Home
-          </Nav.Link>
-          <Nav.Link to="/store" as={NavLink}>
+          </NavLink>
+          <NavLink
+            to="/store"
+            className={({ isActive }) =>
+              isActive
+                ? "activeClassName"
+                : "text-decoration-none text-white fw-700"
+            }
+          >
             Store
-          </Nav.Link>
-          <Nav.Link to="/about" as={NavLink}>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "activeClassName"
+                : "text-decoration-none text-white fw-700"
+            }
+          >
             About
-          </Nav.Link>
+          </NavLink>
         </Nav>
         {cartQuantity > 0 && (
           <Button

@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <ShoppingCartProvider>
         <Navbar />
-        <Container className="mb-4 cover">
+        <Container className="mb-4 cover w-100">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/store" element={<Store />} />

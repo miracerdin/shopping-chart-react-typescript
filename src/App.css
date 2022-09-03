@@ -6,6 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
 }
 .bg {
   background-color: #9df1d5;
@@ -18,7 +19,6 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  overflow: hidden;
 }
 .balon {
   width: 50px;
@@ -30,11 +30,15 @@
   background-position: center;
   position: relative;
   bottom: -100vh;
-  overflow: hidden;
   animation: mirac 5s ease-in infinite;
 }
 .bublecover {
   display: flex;
+}
+.activeClassName {
+  color: rgb(241, 65, 65);
+  text-decoration: none;
+  font-weight: 700;
 }
 @keyframes mirac {
   0% {
