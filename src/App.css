@@ -10,3 +10,75 @@
 .bg {
   background-color: #9df1d5;
 }
+.cover {
+  position: relative;
+}
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.balon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("../public/imgs/bubble.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  bottom: -100vh;
+  overflow: hidden;
+  animation: mirac 5s ease-in infinite;
+}
+.bublecover {
+  display: flex;
+}
+@keyframes mirac {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+.balon:nth-child(1) {
+  width: 25px;
+  height: 25px;
+}
+.balon:nth-child(2) {
+  animation-delay: 2s;
+  width: 35px;
+  height: 35px;
+}
+.balon:nth-child(3) {
+  animation-delay: 1s;
+  width: 15px;
+  height: 15px;
+}
+.balon:nth-child(4) {
+  animation-delay: 2.5s;
+}
+.balon:nth-child(5) {
+  animation-delay: 4s;
+  width: 20px;
+  height: 20px;
+}
+.balon:nth-child(6) {
+  animation-delay: 1.5s;
+  width: 27px;
+  height: 27px;
+}
